@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background-color:  hsl(0, 0%, 86%);
+}
+
+.container {
+    padding: 2rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem 1rem 10rem 1rem;
+    width: 600px;
+}
+
+.container .formBx form {
+    display: flex;
+    gap: 2rem;
+}
+
+.container .formBx form .inputBx {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .formBx form .inputBx label {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+}
+
+.container .formBx form .inputBx input {
+    width: 120px;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    border: 2px solid hsl(0, 0%, 86%);
+    font-weight: 600;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.container .formBx form .inputBx .error {
+    width: 120px;
+    margin-top: 10px;
+    color: red;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.container .formBx form .inputBx input:focus {
+    border: 2px solid hsl(259, 100%, 65%);
+}
+
+.container .formBx button:hover {
+    background-color: hsl(0, 0%, 8%);
+}
+
+.container .formBx .submitBx {
+    display: flex;
+    align-items: center;
+}
+
+.container .formBx hr {
+    width: 100%;
+    color: hsl(0, 0%, 86%);
+}
+
+.container .formBx button {
+    border: none;
+    padding: 1rem;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container .resultBx h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.container .resultBx h1 span {
+    color: hsl(259, 100%, 65%);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        width: 500px;
+    }
+    
+    form {
+        justify-content: space-between;
+    }
+
+    .container .formBx .submitBx {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4rem 0;
+    }
+
+    .container .formBx button  {
+        position: absolute;
+    }
+
+}

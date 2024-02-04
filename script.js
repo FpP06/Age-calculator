@@ -25,8 +25,8 @@ function validation(year, month, day) {
             input.style.borderColor = 'hsl(0, 0%, 86%)';
             input.previousElementSibling.style.color = 'hsl(0, 1%, 44%)'; 
             input.nextElementSibling.textContent = '';
-            
-            if(month <= 0 || month > 11) {
+
+            if(month < 0 || month > 11) {
                 document.getElementById('month').style.borderColor = 'red';
                 document.getElementById('month').previousElementSibling.style.color = 'red';
                 document.getElementById('month').nextElementSibling.textContent = 'The month number is not between 1-12';
@@ -62,7 +62,7 @@ function validation(year, month, day) {
                 validator = false;
                 return false;
             }
-            else if(year == now.getFullYear() && month > now.getMonth() && (month > 0 && month <= 11)) {
+            else if(year == now.getFullYear() && month > now.getMonth() && (month >= 0 && month <= 11)) {
                 document.getElementById('month').style.borderColor = 'red';
                 document.getElementById('month').previousElementSibling.style.color = 'red';
                 document.getElementById('month').nextElementSibling.textContent = 'Must be in the past';
